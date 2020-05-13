@@ -52,6 +52,7 @@ fi
 
 cat <<RUBY >> Gemfile
 gem 'spree', path: '..'
+gem 'spree_multi_vendor', github: 'spree-contrib/spree_multi_vendor'
 $SPREE_AUTH_DEVISE_GEM
 $SPREE_GATEWAY_GEM
 
@@ -72,3 +73,5 @@ bundle exec rails g spree:install --auto-accept --user_class=Spree::User --enfor
 bundle exec rails g spree:mailers_preview
 bundle exec rails g spree:auth:install
 bundle exec rails g spree_gateway:install
+bundle exec rails g spree_multi_vendor:install
+

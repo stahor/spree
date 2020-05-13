@@ -16,7 +16,7 @@
     "memcachedcloud:30"
   ],
   "scripts": {
-    "postdeploy": "bundle exec rake db:migrate && bundle exec rake db:seed && SKIP_SAMPLE_IMAGES=true bundle exec rake spree_sample:load"
+    "postdeploy": "bundle exec rails g spree_multi_vendor:install && bundle exec rake db:migrate && bundle exec rake db:seed && SKIP_SAMPLE_IMAGES=true bundle exec rake spree_sample:load"
   },
   "env": {
     "ADMIN_EMAIL": {
